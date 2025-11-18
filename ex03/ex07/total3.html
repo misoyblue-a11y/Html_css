@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{background: url(images/pattern_gray.png);
+        margin: 50px 0 0 0;}
+        h1{
+            background: white; 
+            border-top: 1px solid #000;
+            border-bottom: 5px solid #000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #faqBox{
+            border: 2px solid #000 ;
+            border-radius: 20px;
+            background-color: gray;
+            font-size: 12px;
+            color:#ccc;
+            width: 500px;
+            padding:20px;
+            box-shadow:0 0 20px #000;
+            margin: 50px auto;
+        }
+        #faqBox h2 {
+            font-size: 20px;
+			margin-bottom: 10px;
+            border-bottom: 1px dotted white;
+            padding: 0 0 10px 20px;
+        }
+
+        #faqBox dl{
+            font-size: 12px;
+            line-height: 150%;
+            margin-left: 10px;
+        }
+        #faqBox dt{
+            background-color: #000;
+            font-size: 14px;
+            padding: 5px;
+            margin: 0 0 10px;
+            border-radius: 10px;
+        }
+        #faqBox dt::before{
+            content: "Q . . .";
+            color: greenyellow;
+            font-weight: bold;
+            font-size: 17px;
+        }   
+        #faqBox dl dd{
+            margin-right: 30px;
+            text-align: justify;
+            margin-left: 20px;
+        }
+        #faqBox dl dd::before{
+            content:"A... ";
+            color:#e1fc90;
+            font-weight: bold;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+		<h1><img src="images/faq_topimg.jpg" width="687" height="44" alt="faq" /></h1>
+		<div id="faqBox">	
+		 <h2>3DS MAX에서 에러 메시지</h2>
+		 <dl>
+			<dt>Missing Map Files 의 에러 메시지가 나옵니다</dt>
+			<dd>
+					 위와 같은 에러 메시지는 맥스 3.1 풀버전을 설치하시지 않으셨기 때문입니다.
+					맥스 3.1 setup 시에 custom 옵션에서 모든 항목을 체크하시면 door 와 windows라는 플러그인이 설치가 됩니다.
+			</dd>
+		 </dl>
+		</div>
+	</body>
+</body>
+</html>

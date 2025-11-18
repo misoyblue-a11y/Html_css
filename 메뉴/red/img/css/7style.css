@@ -1,0 +1,232 @@
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body{
+    font-family: "Noto Sans KR", sans-serif;
+} 
+
+/* a{text-decoration: none;}
+
+.header_utill{
+    background: #261f4c;
+    padding: 0 120px;
+}
+.header_utill>ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.header_utill>ul>li{}
+.header_utill>ul>li>a{
+    color: #fff;
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+}
+.header_utill>ul>li>a.g{color: #2ee4bb}
+.header_utill>ul>li>ul{
+    display: none;
+    position: absolute;
+    background: #ddd;
+    padding: 20px;
+    border-radius: 20px;
+}
+.header_utill>ul>li:last-child>ul{
+    right: 80px;
+}
+.header_utill>ul>li:hover>ul{
+    display: block; 
+}
+}
+.header_utill>ul>li:hover>ul::before{
+    content:"";
+    border-width: 7px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-color:  transparent transparent #ddd transparent;
+}
+.header_utill>ul>li>ul>li{
+    line-height: 150%;
+}
+.header_utill>ul>li>ul>li>a{
+   color: #000;
+   font-size: 12px;
+}
+.header_utill>ul>li>ul>li>a:hover{
+    color: red;
+}
+.header_nav{
+    width: 100%;
+    height: 100px;
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+.header_nav h1{}
+.header_nav .gnb_menu{}
+.header_nav .gnb_menu>ul{
+    display: flex;
+}
+.header_nav .gnb_menu>ul>li{}
+.header_nav .gnb_menu>ul>li>a{
+    font-size: 19px;
+    color: #222;
+    padding: 40px 30px;
+    display: block;
+}
+.header_nav .quick_list{}
+.header_nav .quick_list>ul{
+    display: flex;
+}
+.header_nav .quick_list>ul>li{
+    margin-left: 10px;
+    padding-left: 20px;
+}
+.header_nav .quick_list>ul>li>a{
+    font-size: 15px;
+}
+.header_nav .quick_list>ul>li>a{
+    position: relative;
+}
+.header_nav .quick_list>ul>li:first-child>a{
+    color: red;
+}
+.header_nav .quick_list>ul>li:first-child>a::before{
+    position: absolute;
+    content: "";
+    background: url(../images/bg_set_common.png) no-repeat -91px -110px;
+    width: 16px;
+    height:17px; 
+    left:-20px;
+}
+.header_nav .quick_list>ul>li:nth-child(2)>a::before{
+    position: absolute;
+    content: "";
+    background: url(../images/bg_set_common.png) no-repeat -30px -28px;
+    width: 16px;
+    height:17px; 
+    left:-20px;
+}
+.header_nav .quick_list>ul>li>a>.fa-bars{
+    font-size: 20px;
+}  */
+ 
+
+/* a{text-decoration: none;}
+.header_utill{background: rgb(47, 130, 255); padding: 0 120px;}
+.header_utill ul{display: flex;  justify-content: flex-end;}
+.header_utill ul li{}
+.header_utill ul li a{font-size: 12px; padding: 10px; color: #ccc; display: block;}
+.header_utill ul li .g{color: orange;}
+
+.header_utill ul li ul{
+    display: none;
+    position: absolute;
+    background: #ddd;
+    padding: 20px;
+    border-radius: 20px;
+}
+.header_utill ul li:hover ul {display: block;}
+.header_utill ul li:hover ul::before{
+    border-style: solid;
+    border-color: transparent transparent #ddd transparent;
+    border-width: 7px;
+    top: -14px;
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translatex(-50%);
+} 
+.header_utill ul li:last-child ul{right: 70px;}
+.header_utill ul li ul li{line-height: 150%;}
+.header_utill ul li ul li a{color: black;}
+.header_nav{display: flex; padding: 0 120px; width: 100%; justify-content: space-between; align-items: center; box-sizing: border-box;} 
+.header_nav h1{}
+.header_nav .gnb_menu{}
+.header_nav .gnb_menu ul{display: flex;}
+.header_nav .gnb_menu ul li{}
+.header_nav .gnb_menu ul li a{padding:40px 30px; color: rgb(87, 55, 55); display: block; font-size: 20px;}
+
+.header_nav .quick_list{}
+.header_nav .quick_list ul{display: flex;}
+.header_nav .quick_list ul li{}
+.header_nav .quick_list ul li a{}
+.header_nav .quick_list>ul>li:first-child>a::before{
+    position: absolute;
+    content: "";
+    background: url(../images/bg_set_common.png) no-repeat -91px -110px;
+    width: 16px;
+    height:17px; 
+    left:-20px;
+}
+.header_nav .quick_list>ul>li:nth-child(2)>a::before{
+    background: url(../images/bg_set_common.png) no-repeat -117px -110px;
+    width: 16px;
+    height: 17px;
+    position: absolute;
+    content: "";
+    left: -20px;
+}
+
+.header_nav .quick_list>ul>li>a{
+    position: relative;
+}
+
+
+.header_nav .quick_list>ul>li{
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+
+ */
+a{text-decoration: none;}
+.header_utill{padding: 0 120px; background: rosybrown} 
+.header_utill ul{display: flex; justify-content: flex-end;} 
+.header_utill ul li{} 
+.header_utill ul li a{padding: 7px; display: block; font-size: 13px; color: #ccc;} 
+.header_utill ul li a.g{color: rgb(231, 83, 24);} 
+.header_utill ul li ul{display: none; position: absolute;
+    border-radius: 20px; background-color: #ddd;
+    padding: 20px;} 
+.header_utill ul li:hover ul{
+    display:block;
+}
+.header_utill>ul>li:hover>ul::before{
+    content:"";
+    border-width: 7px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-color:  transparent transparent #ddd transparent;
+}
+.header_utill ul li:last-child ul{right: 70px;}
+.header_utill ul li u{}
+.header_utill ul li ul li{} 
+.header_utill ul li ul li a{color: #000; font-size: 12px;} 
+.header_nav{display: flex; padding: 0 120px; box-sizing: border-box;
+            justify-content: space-between; align-items: center;}
+.header_nav h1{}
+.header_nav .gnb_menu{}
+.header_nav .gnb_menu ul{display: flex;}
+.header_nav .gnb_menu ul li{}
+.header_nav .gnb_menu ul li a{
+    padding: 40px 30px; font-size: 20px; display: block; color: #000;}
+.header_nav .quick_list ul{display: flex;}
+.header_nav .quick_list ul li{padding-left: 30px;}
+.header_nav .quick_list ul li:first-child a::before{
+    background: url(../css/bg_set_common.png) no-repeat -90px -110px;
+    position: absolute;
+    width: 17px; height: 17px;
+    content: "";
+    left: -20px;
+}
+.header_nav .quick_list ul li:nth-child(2) a::before{background: url(../img/bg_set_common.png)
+    no-repeat -122px -29px;
+    position: absolute; content: ""; width: 27px; height: 27px;
+}
+.header_nav .quick_list ul li a{position: relative; color: #000;}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSS-only 햄버거</title>
+<style>
+  /* 체크박스는 화면에서 숨기되 포커스는 가능하게 */
+  #menu-toggle {
+    position: absolute;
+    left: -9999px;
+  }
+
+  /* 햄버거 버튼 (label) */
+  .menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px;
+    display: inline-block;
+    z-index: 1001;
+  }
+
+  /* 메뉴 기본 상태: 화면 오른쪽 밖에 숨김 */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -260px;    /* 숨김 */
+    width: 260px;
+    height: 100vh;
+    background: #333;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    transition: right 0.28s ease;
+    z-index: 1000;
+  }
+
+  /* 체크되면 메뉴 보이기 */
+  #menu-toggle:checked ~ .mobile-menu {
+    right: 0;
+  }
+
+  .mobile-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .mobile-menu li { margin-bottom: 18px; }
+  .mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  /* 배경 클릭으로 닫기(선택) */
+  .backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 900;
+  }
+  /* 체크되면 배경 보이기 */
+  #menu-toggle:checked ~ .backdrop { display: block; }
+</style>
+</head>
+<body>
+
+  <!-- input(label과 연결되도록 id 사용) -->
+  <input type="checkbox" id="menu-toggle">
+
+  <!-- 햄버거 버튼 (label) -->
+  <label for="menu-toggle" class="menu-btn" aria-hidden="true">☰</label>
+
+  <!-- optional backdrop (메뉴 열리면 어두운 배경) -->
+  <label for="menu-toggle" class="backdrop" aria-hidden="true"></label>
+
+  <!-- 메뉴 (input과 같은 레벨에 있어야 함) -->
+  <nav class="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        #container{width: 800px; height: 900px; margin: 0 auto; background:yellow;}
+        header{
+            text-align: center;
+            width:100%; 
+            height: 90px;
+            background-color: aqua;
+            line-height:90px;
+        }
+        nav{
+            text-align: center;
+            width:100%; 
+            height: 90px;
+            background-color: rgb(63, 133, 94);
+            line-height:90px;
+        }
+        main{
+            width: 100%;
+            height: 585px;
+            background: #032d76;
+            display: flex;
+        }
+        section{
+            width: 560px;
+            height: 100%;
+            background: rgb(211, 84, 205);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        section article{
+            height: 262px;
+            margin-bottom: 20px;
+            background: rgb(233, 88, 88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        aside{
+            width: 240px;
+            height: 585px;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer{
+            width: 100%;
+            height: 135px;
+            background: yellowgreen;
+            text-align: center;
+            line-height: 135px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>머릿말부분</header>
+        <nav>네비게이션부분</nav>
+            <main>
+                <section>
+                    <article>본문내용</article>
+                    <article>중요한 내용</article>
+                </section>
+                    <aside>부수적인내용(광고)</aside>
+            </main>
+                <footer>하단부분</footer>
+    </div>
+</body>
+</html>

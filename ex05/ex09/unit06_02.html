@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드</title>
+  <style>
+    .cnt>div{color: #fff; text-align: center; font-size: 2em;}
+    .cnt>div:nth-child(1){background: red;}
+    .cnt>div:nth-child(2){background: rgb(111, 184, 68);}
+    .cnt>div:nth-child(3){background: rgb(221, 173, 173);}
+    .cnt>div:nth-child(4){background: rgb(0, 110, 255);}
+    .cnt>div:nth-child(5){background: rgb(127, 185, 94);}
+    .cnt>div:nth-child(6){background: rgb(201, 151, 194);}
+    .cnt{
+      display: grid;
+      /* grid-template-columns: 100px 200px 300px;
+      grid-auto-rows: 100px; */
+      margin-bottom: 10px;
+    }
+    .cnt1{
+      grid-template-columns: repeat(3,1fr)
+    }
+    .cnt2{
+      font-size: 12px;
+      width: 1200px;
+      border: 1px solid #ccc;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: minmax(300px, auto);
+    }
+  </style>
+</head>
+<body>
+    <div class="cnt">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <div class="cnt cnt1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <div class="cnt cnt2">
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos impedit laborum excepturi unde ipsam, at eaque consectetur, voluptatum nihil vitae minus voluptate molestias vel corrupti ratione officia repudiandae voluptatibus magni!</div>
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos impedit laborum excepturi unde ipsam, at eaque consectetur, voluptatum nihil vitae minus voluptate molestias vel corrupti ratione officia repudiandae voluptatibus magni!</div>
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos impedit laborum excepturi unde ipsam, at eaque consectetur, voluptatum nihil vitae minus voluptate molestias vel corrupti ratione officia repudiandae voluptatibus magni!</div>
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos impedit laborum e </div>
+      <div>Lorem ipsum, dolor sit amet consectetur adipis </div>
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos i </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* a{text-decoration: none; color: #000}
+header{width: 300px; height: 100vh; border-right: 1px solid #ddd;}
+h1{text-align: center;}
+h1 a{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    display: block;
+}
+nav{margin-top: 50px;}
+nav>ul{border-top: 1px solid #ddd;}
+nav>ul>li{
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+nav>ul>li:hover{
+    background: #f00;
+}
+nav>ul>li>a{
+    display: block;
+    padding: 20px;
+}
+nav>ul>li>ul{
+    display: none;
+}
+nav>ul>li:hover>ul{display: block; background: #2b7e36;}
+nav>ul>li>ul>li{transition: .3s;}
+nav>ul>li>ul>li:hover{background: palevioletred;}
+nav>ul>li>ul>li:hover a{background: rgb(117, 68, 68);}
+nav>ul>li>ul>li>a{padding: 20px; display: block;} 
+ */
+
+
+/* a{text-decoration: none; color: #000;}
+header{height: 100vh; width: 300px; border-right: 1px solid #ddd;}
+h1{text-align: center;}
+h1 a{ display: block; padding: 30px; font-size: 30px; font-weight: bold;}
+nav{margin-top: 50px;}
+
+nav>ul{border-top: 1px solid #ddd}
+nav>ul>li{border-bottom: 1px solid #ddd;
+    text-align: center;}
+nav>ul>li:hover{background: red;}
+
+nav>ul>li>a{display: block; padding: 20px;}
+nav>ul>li:hover>ul{display: block; background: #2b7e36;}
+nav>ul>li>ul{display: none;}
+nav>ul>li>ul>li{transition: .3s;}
+nav>ul>li>ul>li:hover{background: yellow;}
+nav>ul>li>ul>li:hover a{background: rgb(78, 78, 7);}
+nav>ul>li>ul>li>a {padding: 20px; display: block; }; 
+ */
+
+/* a{text-decoration: none; color: #000;}
+header{width: 300px; height: 100vh; border: 1px solid #ddd;}
+h1{text-align: center;}
+h1 a{display: block; font-size: 30px; margin-top: 30px; font-weight: bold;}
+nav{margin-top: 40px; }
+nav>ul{border-top: 1px solid #ddd; display: block;}
+nav>ul>li{border-bottom: 1px solid #ddd; display: block;text-align: center; }
+nav>ul>li>a{padding: 20px; display: block;}
+
+nav>ul>li>ul{display:none;}
+nav>ul>li:hover>ul{background-color: aqua; display: block;}
+
+nav>ul>li>ul>li{transition: .3s;}
+nav>ul>li>ul>li:hover{background-color: rgb(16, 168, 54);}
+nav>ul>li>ul>li>a{display: block; padding: 20px;}
+nav>ul>li>ul>li>a:hover{background: pink;}
+ */
+
+a{text-decoration: none; color: #000;}
+header{width: 300px; height: 100vh; border-right:1px solid #ddd }
+header h1{text-align: center;}
+header h1 a{font-weight: bold; display: block; padding: 30px; font-size: 30px;}
+nav{margin-top: 30px;}
+nav>ul{border-top: 1px solid #ddd;}
+nav>ul>li{border-bottom: 1px solid #ddd;}
+nav>ul>li>a{display: block; text-align: center; padding: 20px;}
+
+nav>ul>li>ul{display: none;}
+
+nav>ul>li:hover>ul{background-color: aqua; display: block;}
+nav>ul>li>ul>li{transition: .3s; }
+nav>ul>li>ul>li:hover{background: blue;}
+nav>ul>li>ul>li>a{ display:block; padding:20px; text-align: center b b ;}
+nav>ul>li>ul>li>a:hover{background: rgb(134, 46, 61);}
+

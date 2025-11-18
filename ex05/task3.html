@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-depth 메뉴</title>
+  <style>
+    /* 기본 리셋 */
+    *{margin:0; padding:0; box-sizing:border-box;}
+    body{font-family:sans-serif;}
+
+    nav{
+      background:#333;
+    }
+
+    /* 1depth */
+    .depth1{
+      display:flex;
+      list-style:none;
+      background:#333;
+    }
+    .depth1 > li{
+      position:relative;
+    }
+    .depth1 > li > a{
+      display:block;
+      color:white;
+      padding:15px 30px;
+      text-decoration:none;
+    }
+    .depth1 > li:hover{
+      background:#444;
+    }
+
+    /* 2depth */
+    .depth2{
+      display:none;
+      position:absolute;
+      top:50px;
+      left:0;
+      background:#555;
+      list-style:none;
+      min-width:150px;
+    }
+    .depth2 li a{
+      display:block;
+      color:white;
+      padding:10px;
+      text-decoration:none;
+    }
+    .depth1 > li:hover > .depth2{
+      display:block;
+    }
+
+    /* 3depth */
+    .depth3{
+      display:none;
+      position:absolute;
+      top:0;
+      left:150px;
+      background:#666;
+      list-style:none;
+      min-width:150px;
+    }
+    .depth3 li a{
+      display:block;
+      color:white;
+      padding:10px;
+      text-decoration:none;
+    }
+    .depth2 li:hover > .depth3{
+      display:block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="depth1">
+      <li><a href="#">HOME</a></li> 제목
+      <li>
+        <a href="#">PRODUCTS</a> 제목
+        <ul class="depth2">
+          <li>
+            <a href="#">Shoes</a>
+            <ul class="depth3">
+              <li><a href="#">Sneakers</a></li>
+              <li><a href="#">Sandals</a></li>
+              <li><a href="#">Boots</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Bags</a>
+            <ul class="depth3">
+              <li><a href="#">Backpack</a></li>
+              <li><a href="#">Tote</a></li>
+              <li><a href="#">Clutch</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">ABOUT</a></li> 제목 
+      <li><a href="#">CONTACT</a></li> 제목
+    </ul>
+  </nav>
+
+</body>
+</html>

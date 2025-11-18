@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stick 스크롤을 내렸을때 어떻게 동작하게 만드는 방법</title>
+    <style>
+        body{
+            padding-bottom: 2000px;
+        }
+        .positionbox{height: 1500px;}
+
+        .positionbox >div{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: red;
+            display: inline-block;
+        }
+        .sticky{
+            position:sticky;
+            top: 0;
+        }
+        .positionbox .static{
+            background-color: rgb(75, 52, 52);
+            position:static;
+            top: 0;}
+
+        .positionbox .fixed{
+            background-color: rgb(82, 163, 187);
+            position:fixed;
+            bottom: 80px;}
+
+        .positionbox .relative{
+             background-color: pink;
+             position:relative;
+             top: 30px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="positionbox">
+        <h2>스크롤을 내려보세요</h2>
+        <div class="sticky">sticky</div>
+        <div class="static">static</div>
+        <div class="fixed">fixed</div>
+        <div class="relative">relative</div>
+    </div>
+</body>
+</html>
