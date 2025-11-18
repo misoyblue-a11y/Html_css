@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw vs % 예시</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .wrapper {
+            width: 70%;               /* wrapper 크기는 뷰포트의 70% */
+            max-width: 900px;
+            min-width: 300px;
+            padding: 16px;
+            border: 2px dashed #888;
+            margin-bottom: 16px;
+        }
+
+        .row { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; }
+
+        .box {
+            height: 80px;
+            background: linear-gradient(135deg,#a8d0e6,#374785);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .box-percent { width: 50%; }   /* 50% = 부모(.wrapper)의 50% */
+        .box-vw      { width: 50vw; }  /* 50vw = 뷰포트의 50% */
+
+        .info { font-size: 14px; color: #222; }
+        .values { font-family: monospace; background:#f4f4f4; padding:6px 8px; border-radius:4px; }
+    </style>
+</head>
+<body>
+    <h2>vw vs % 비교</h2>
+    <p class="info">아래 박스는 동일한 높이지만 너비 단위가 다릅니다. 브라우저 창을 조절해 차이를 확인하세요.</p>
+
+    <div class="wrapper" id="wrapper">
+        <div class="row">
+            <div class="box box-percent" id="boxPercent">50% (부모 기준)</div>
+            <div class="box box-vw" id="boxVw">50vw (뷰포트 기준)</div>
+        </div>
+
+        <div class="row">
+            <div class="info">wrapper 너비: <span class="values" id="wW"></span></div>
+            <div class="info">50% 박스 실제 너비: <span class="values" id="pW"></span></div>
+            <div class="info">50vw 박스 실제 너비: <span class="values" id="vW"></span></div>
+        </div>
+    </div>
+
+    <script>
+        const update = () => {
+            const wrapper = document.getElementById('wrapper');
+            const boxP = document.getElementById('boxPercent');
+            const boxV = document.getElementById('boxVw');
+
+            document.getElementById('wW').textContent = wrapper.clientWidth + 'px';
+            document.getElementById('pW').textContent = boxP.clientWidth + 'px';
+            document.getElementById('vW').textContent = boxV.clientWidth + 'px';
+        };
+
+        window.addEventListener('resize', update);
+        window.addEventListener('load', update);
+    </script>
+</body>
+</html>
