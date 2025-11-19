@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SVG 애니메이션 장미</title>
+<style>
+  body { font-family: system-ui, Arial; background:#fafafa; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+  svg { width:80vw; max-width:560px; height:auto; display:block; }
+
+  /* 공통 드로우 애니메이션 */
+  .draw {
+    stroke: #222;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    animation: drawPath 6s linear infinite;
+  }
+
+  /* 줄기/잎 선 애니메이션 (조금 빠르게 시작) */
+  .stem {
+    stroke: #2b7a3e;
+    stroke-width: 3;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawStem 6s linear infinite;
+  }
+
+  /* 꽃잎 채우기 */
+  .petal-fill {
+    fill: #f6d243;           /* 노란색 장미 */
+    fill-opacity: 0;
+    transform-origin: 50% 50%;
+    animation: showPetal 6s linear infinite;
+  }
+
+  /* 잎 채우기 */
+  .leaf-fill {
+    fill: #3aa45a;
+    fill-opacity: 0;    
+    animation: showLeaf 6s linear infinite;
+  }
+
+  /* 살짝 팝 효과 (확대/축소) */
+  .petal-group { transform-origin: 50% 45%; animation: petalPop 6s linear infinite; }
+
+  /* 키프레임들 */
+  @keyframes drawPath {
+    0%   { stroke-dashoffset: 1200; opacity:1; }
+    30%  { stroke-dashoffset: 0; }    /* 선이 그려짐 (0~30%) */
+    60%  { stroke-dashoffset: 0; }    /* 유지 (30~60%) */
+    100% { stroke-dashoffset: 1200; opacity:0; } /* 리셋 (페이드아웃) */
+  }
+
+  @keyframes drawStem {
+    0%   { stroke-dashoffset: 500; opacity:1; }
+    25%  { stroke-dashoffset: 0; }    /* 줄기 먼저 그려짐 */
+    60%  { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 500; opacity:0; }
+  }
+
+  @keyframes showPetal {
+    0%   { fill-opacity: 0; }
+    34%  { fill-opacity: 0; }        /* 선 그리는 동안 비어있음 */
+    45%  { fill-opacity: 0.9; }      /* 채워짐 시작 */
+    70%  { fill-opacity: 0.95; }
+    100% { fill-opacity: 0; }        /* 루프를 위해 사라짐 */
+  }
+
+  @keyframes showLeaf {
+    0%   { fill-opacity: 0; }
+    30%  { fill-opacity: 0; }
+    48%  { fill-opacity: 0.95; }     /* 잎은 꽃 뒤따라 채워짐 */
+    75%  { fill-opacity: 0.95; }
+    100% { fill-opacity: 0; }
+  }
+
+  @keyframes petalPop {
+    0%   { transform: scale(0.98); }
+    45%  { transform: scale(1.02); }
+    55%  { transform: scale(1); }
+    100% { transform: scale(0.98); }
+  }
+</style>
+</head>
+<body>
+  <svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg" aria-label="애니메이션 장미">
+    <!-- 줄기 -->
+    <path class="stem" d="M300 520 C300 480 320 420 290 380 C260 340 260 300 300 270" fill="none"/>
+
+    <!-- 잎(선) -->
+    <path class="draw" d="M300 430 C340 460 380 460 410 430 C385 440 350 420 330 400 Z" stroke="#2b7a3e"/>
+    <path class="draw" d="M270 380 C230 420 200 430 170 400 C198 412 225 392 250 370 Z" stroke="#2b7a3e"/>
+
+    <!-- 꽃잎 선들: 여러 경로로 장미 윤곽을 그림 -->
+    <g stroke="#222" stroke-width="3" fill="none">
+      <path class="draw" d="M300 270
+            C320 250 360 240 380 260
+            C400 280 380 320 350 330
+            C320 340 300 330 290 310
+            C280 290 285 280 300 270 Z" />
+      <path class="draw" d="M300 260
+            C280 230 240 230 220 250
+            C200 270 220 300 250 310
+            C275 320 290 310 300 290 Z" />
+      <path class="draw" d="M300 280
+            C320 300 340 320 330 350
+            C310 380 270 380 250 350
+            C235 330 250 305 270 300
+            C290 295 295 285 300 280 Z" />
+      <!-- 중심 소용돌이 -->
+      <path class="draw" d="M300 290
+            C305 280 320 275 325 285
+            C330 295 315 305 300 300
+            C290 297 295 292 300 290 Z" />
+    </g>
+
+    <!-- 채워진 꽃잎 (동일한 형태를 채움으로써 선과 맞춤) -->
+    <g class="petal-group">
+      <path class="petal-fill" d="M300 270
+            C320 250 360 240 380 260
+            C400 280 380 320 350 330
+            C320 340 300 330 290 310
+            C280 290 285 280 300 270 Z" />
+
+      <path class="petal-fill" d="M300 260
+            C280 230 240 230 220 250
+            C200 270 220 300 250 310
+            C275 320 290 310 300 290 Z" />
+
+      <path class="petal-fill" d="M300 280
+            C320 300 340 320 330 350
+            C310 380 270 380 250 350
+            C235 330 250 305 270 300
+            C290 295 295 285 300 280 Z" />
+
+      <path class="petal-fill" d="M300 290
+            C305 280 320 275 325 285
+            C330 295 315 305 300 300
+            C290 297 295 292 300 290 Z" />
+    </g>
+
+    <!-- 채워진 잎 (윤곽과 동일하게 채움) -->
+    <path class="leaf-fill" d="M300 430 C340 460 380 460 410 430 C385 440 350 420 330 400 Z" />
+    <path class="leaf-fill" d="M270 380 C230 420 200 430 170 400 C198 412 225 392 250 370 Z" />
+  </svg>
+</body>
+</html>

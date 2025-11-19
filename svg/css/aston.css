@@ -1,0 +1,102 @@
+/* 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.close-btn::before,
+.close-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    transform: translate(-50%, -50%);
+}
+.close-btn::before { transform: translate(-50%, -50%) rotate(45deg); }
+.close-btn::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.button-x {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+}
+
+/* 메뉴 전체 */
+.allmenu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.menu {
+    width: 20%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+/* 메뉴 리스트 */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.menu-list > li {
+    font-size: 22px;
+    color: #fff;
+    margin: 35px 0;
+    cursor: pointer;
+    position: relative; /* 서브 메뉴 기준 */
+}
+
+.menu-list > li > a {
+    color: #fff;
+}
+
+/* 서브 메뉴 공통 */
+.menu-list ul {
+    display: none; /* 기본 숨김 */
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    top: 0;
+    left: 100%; /* li 오른쪽에 표시 */
+    
+    min-width: 200px;
+}
+
+.menu-list ul li {
+    margin: 15px 0;
+}
+
+/* li에 hover 시 서브 메뉴 표시 */
+.menu-list > li:hover > ul { dsddds
+    display: block;
+    background: #222;
+    
+
+}
